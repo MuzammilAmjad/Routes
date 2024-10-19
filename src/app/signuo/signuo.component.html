@@ -1,0 +1,29 @@
+<h1>Signup</h1>
+<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+  <div>
+    <label for="name">Name:</label>
+    <br>
+    <input type="text" id="name" name="name" [(ngModel)]="user.name" required />
+    <div class="error">{{ errorMessages.name }}</div>
+  </div>
+  <div>
+    <label for="age">Age:</label>
+    <br>
+    <input type="number" id="age" name="age" [(ngModel)]="user.age" required />
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <br>
+    <input type="email" id="email" name="email" [(ngModel)]="user.email" required />
+    <div class="error">{{ errorMessages.email }}</div>
+  </div>
+
+  <div>
+    <label for="pass">Password:</label>
+    <br>
+    <input type="text" id="pass" name="pass" [(ngModel)]="user.pass" required />
+    <div class="error">{{ errorMessages.pass }}</div>
+  </div>
+
+  <button type="submit">Signup</button>
+</form>
